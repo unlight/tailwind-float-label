@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>example/index.html</title>
+        <link rel="stylesheet" href="tailwind.build.css" />
+    </head>
+    <body class="p-5">
+        <form class="max-w-xs mx-auto p-5 space-y-4">
+            <h2 class="text-2xl font-bold text-center">Login</h2>
+            <div class="has-float-label">
+                <input
+                    type="text"
+                    id="username"
+                    autocomplete="off"
+                    placeholder="Input"
+                    class="control-with-float-label outline-none focus:shadow-outline border w-full px-1"
+                    value=""
+                />
+                <label for="username" class="is-float-label bg-white text-gray-700">Label</label>
+            </div>
+            <div class="has-float-label">
+                <label for="Username2" class="is-float-label bg-white text-gray-700"
+                    >Username text-base</label
+                >
+                <input
+                    type="text"
+                    id="Username2"
+                    autocomplete="off"
+                    placeholder="username"
+                    class="control-with-float-label outline-none focus:shadow-outline border w-full px-1 text-base"
+                    value="Joe"
+                />
+            </div>
+            <div class="has-float-label">
+                <input
+                    type="text"
+                    id="Email"
+                    autocomplete="off"
+                    placeholder="Email"
+                    value="test@example.com"
+                    class="control-with-float-label outline-none focus:shadow-outline border w-full px-1 text-lg"
+                />
+                <label for="Email" class="is-float-label bg-white text-gray-700"
+                    >Email text-lg</label
+                >
+            </div>
+
+            <div class="has-float-label">
+                <input
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Password"
+                    value="password"
+                    class="control-with-float-label outline-none focus:shadow-outline border w-full px-1 text-xl"
+                />
+                <label for="Password" class="is-float-label bg-white text-gray-700"
+                    >Password text-xl</label
+                >
+            </div>
+
+            <div class="has-float-label">
+                <input
+                    type="text"
+                    autocomplete="off"
+                    placeholder="text-2xl"
+                    value="text-2xl"
+                    class="control-with-float-label outline-none focus:shadow-outline border w-full px-1 text-2xl"
+                />
+                <label for="Password" class="is-float-label bg-white text-gray-700">text-2xl</label>
+            </div>
+
+            <div class="has-float-label">
+                <input
+                    type="text"
+                    autocomplete="off"
+                    placeholder="text-3xl"
+                    value="text-3xl"
+                    class="control-with-float-label outline-none focus:shadow-outline border w-full px-1 text-3xl"
+                />
+                <label for="Password" class="is-float-label bg-white text-gray-700">text-3xl</label>
+            </div>
+
+            <div class="has-float-label">
+                <input
+                    type="text"
+                    autocomplete="off"
+                    placeholder="text-xs"
+                    value="text-xs"
+                    class="control-with-float-label outline-none focus:shadow-outline border w-full px-1 text-xs"
+                />
+                <label for="Password" class="is-float-label bg-white text-gray-700">text-xs</label>
+            </div>
+
+            <div class="has-float-label">
+                <select
+                    class="control-with-float-label outline-none focus:shadow-outline border w-full px-1"
+                    placeholder="select me"
+                >
+                    <option value="">Sele me</option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                    <option value="4">Option 4</option>
+                    <option value="5">Option 5</option>
+                </select>
+                <label class="is-float-label bg-white text-gray-700">select</label>
+            </div>
+
+            <div class="has-float-label">
+                <textarea
+                    class="control-with-float-label outline-none focus:shadow-outline border w-full px-1"
+                    placeholder="textarea"
+                >
+                </textarea>
+                <label class="is-float-label bg-white text-gray-700">Textarea</label>
+            </div>
+        </form>
+    </body>
+</html>

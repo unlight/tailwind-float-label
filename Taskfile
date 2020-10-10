@@ -1,0 +1,39 @@
+#!/bin/bash
+PATH="$PWD/node_modules/.bin":$PATH
+set -e
+
+dev_build() {
+    node -r ts-node/register/transpile-only node_modules/postcss-cli/index.js src/tailwind.css -o build/tailwind.build.css
+    cp src/index.html build
+}
+
+build() {
+    set -x
+    rm -rfv dist
+    mkdir dist
+    cp -rfv src/*.ts dist
+    cat tsconfig.json | jq 'del(.include, .compilerOptions.outDir)' > dist/tsconfig.json
+    cp -fv README.md LICENSE package.json dist
+    cd dist
+    /usr/bin/find . -name '*.spec.ts' | xargs rm -rvf
+    tsc -p .
+    rm -rvf tsconfig.json
+    cd ..
+    set +x
+}
+
+commit_msg() {
+    if git-branch-is -q -r "^(master)"; then
+        commitlint -E HUSKY_GIT_PARAMS
+    else
+        true
+    fi
+}
+
+commit_lint() {
+    set -x
+    from=$(git_last_release_tag)
+    commitlint --from $from
+}
+
+"$@"
