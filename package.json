@@ -31,7 +31,7 @@
     "test:cov": "c8 --reporter text --exclude \"**/*.spec.ts\" --exclude \"**/testing/**\"  npm run test:r -- --no-timeouts",
     "test:w": "mocha -r ts-node/register/transpile-only --watch-files src/**/*.ts --watch src/**/*.spec.ts",
     "test:d": "node --inspect -r ts-node/register/transpile-only node_modules/mocha/bin/_mocha --no-timeouts --watch-files src/**/*.ts --watch src/**/*.spec.ts",
-    "test:brk": "node --inspect-brk -r ts-node/register/transpile-only node_modules/mocha/bin/_mocha --no-timeouts src/**/*.spec.ts"
+    "test:b": "node --inspect-brk -r ts-node/register/transpile-only node_modules/mocha/bin/_mocha --no-timeouts src/**/*.spec.ts"
   },
   "repository": {
     "type": "git",

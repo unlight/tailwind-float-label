@@ -9,7 +9,7 @@ const defaultConfig = {
     },
 };
 
-type Options = {
+export type Options = {
     /**
      * Custom styles for container.
      */
