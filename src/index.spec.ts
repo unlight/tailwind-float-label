@@ -8,7 +8,6 @@ import floatLabelFactory from '.';
 
 async function process(input) {
     const config = {
-        ...defaultConfig,
         plugins: [floatLabelFactory()],
     };
     return postcss([tailwindcss(config)])

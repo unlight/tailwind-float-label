@@ -1,3 +1,5 @@
+import { DeepPartial } from 'simplytyped';
+
 const defaultConfig = {
     control: 'pt-2 pb-1',
     label: {
@@ -7,19 +9,34 @@ const defaultConfig = {
     },
 };
 
+type Options = {
+    /**
+     * Custom styles for container.
+     */
+    container?: DeepPartial<{ [k: string]: string } | string>;
+    /**
+     * Custom styles for input control.
+     */
+    control?: DeepPartial<{ [k: string]: string } | string>;
+    /**
+     * Custom styles for label.
+     */
+    label?: DeepPartial<{ [k: string]: string } | string>;
+};
+
 module.exports = floatLabelFactory;
 
-export default floatLabelFactory;
-
-function floatLabelFactory() {
-    const config = { ...defaultConfig };
+export default function floatLabelFactory(options?: Options) {
+    const config: Options = { ...defaultConfig, ...options };
 
     return ({ addComponents }) => {
-        const control = toObject(config.control);
-        const label = toObject(config.label);
+        const container = config.container ? toObject(config.container) : {};
+        const control = config.control ? toObject(config.control) : {};
+        const label = config.label ? toObject(config.label) : {};
 
         addComponents({
             '.has-float-label': {
+                ...container,
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'column-reverse',
@@ -43,7 +60,9 @@ function floatLabelFactory() {
     };
 }
 
-function toObject(value: { [k: string]: unknown } | string): { [k: string]: unknown } {
+function toObject(
+    value: DeepPartial<{ [k: string]: string } | string>,
+): DeepPartial<{ [k: string]: string }> {
     if (typeof value === 'string') {
         return { [`@apply ${value}`]: '' };
     }
