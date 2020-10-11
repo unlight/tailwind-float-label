@@ -1,12 +1,12 @@
+import { strict as assert } from 'assert';
 import { stripIndents } from 'common-tags';
 import postcss from 'postcss';
 import tailwindcss from 'tailwindcss';
 import defaultConfig from 'tailwindcss/defaultConfig';
 
 import floatLabelFactory, { Options } from '.';
-import { strict as assert } from 'assert';
 
-async function process(input, options?: Options) {
+async function process(options?: Options) {
     const corePlugins = Object.keys(defaultConfig.variants).reduce((result, key) => {
         if (!['fontSize', 'lineHeight', 'padding'].includes(key)) {
             result[key] = false;
@@ -21,8 +21,8 @@ async function process(input, options?: Options) {
         corePlugins,
         plugins: [floatLabelFactory(options)],
     };
-    return postcss([tailwindcss(config)])
-        .process(input, { from: undefined, map: false })
+    return postcss(tailwindcss(config))
+        .process('@tailwind components', { from: undefined, map: false })
         .then((result) => {
             assert.equal(result.warnings().length, 0);
             return result.content;
@@ -34,8 +34,7 @@ it('smoke', () => {
 });
 
 it('generate components', async () => {
-    const input = '@tailwind components';
-    const output: string = stripIndents`${await process(input)}`;
+    const output: string = stripIndents`${await process()}`;
     assert.match(
         output,
         new RegExp(stripIndents`.has-float-label {
@@ -48,8 +47,7 @@ it('generate components', async () => {
 
 describe('config', () => {
     it.skip('container', async () => {
-        const input = '@tailwind components';
-        const output: string = stripIndents`${await process(input, {
+        const output: string = stripIndents`${await process({
             container: { padding: '0' },
         })}`;
         assert.match(

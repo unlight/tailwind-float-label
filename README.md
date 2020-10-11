@@ -2,6 +2,8 @@
 
 Tailwind plugin to add floating label, control with float label components
 
+Demo - https://unlight.github.io/tailwind-float-label
+
 ## Setup
 
 1.
@@ -14,6 +16,25 @@ npm install --save-dev tailwind-float-label
 
 ```js
 plugins: [require('tailwind-float-label')(options)],
+```
+
+## Options
+
+```ts
+type Options = {
+    /**
+     * Custom styles for container.
+     */
+    container?: DeepPartial<{ [k: string]: string } | string>;
+    /**
+     * Custom styles for input control.
+     */
+    control?: DeepPartial<{ [k: string]: string } | string>;
+    /**
+     * Custom styles for label.
+     */
+    label?: DeepPartial<{ [k: string]: string } | string>;
+};
 ```
 
 ## Usage
@@ -48,29 +69,10 @@ Plugins adds three components supposed used together:
 </form>
 ```
 
-Rules for usage:
+#### Notes:
 
 1. `.control-with-float-label` and `.is-float-label`
    must be direct children of `.has-float-label`
-2. If label used before form control it becomes sticky (always visible)
-3. If label used after form control label is visible when controls contains value
+2. If label used before form control, label becomes sticky (always visible)
+3. If label used after form control, label is visible when control contains value
    (classic float label pattern)
-
-## Options
-
-```ts
-type Options = {
-    /**
-     * Custom styles for container.
-     */
-    container?: DeepPartial<{ [k: string]: string } | string>;
-    /**
-     * Custom styles for input control.
-     */
-    control?: DeepPartial<{ [k: string]: string } | string>;
-    /**
-     * Custom styles for label.
-     */
-    label?: DeepPartial<{ [k: string]: string } | string>;
-};
-```
