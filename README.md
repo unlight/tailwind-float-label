@@ -35,7 +35,7 @@ Plugins adds three components supposed used together:
             placeholder="Name"
             class="control-with-float-label outline-none focus:shadow-outline border w-full px-1"
         />
-        <label for="name" class="is-float-label bg-white text-gray-700">Label</label>
+        <label for="name" class="is-float-label bg-white text-gray-700">Name</label>
     </div>
     <div class="has-float-label">
         <label class="is-float-label bg-white text-gray-700">About</label>
