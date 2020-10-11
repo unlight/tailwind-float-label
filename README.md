@@ -6,13 +6,11 @@ Demo - https://unlight.github.io/tailwind-float-label
 
 ## Setup
 
-1.
-
 ```sh
 npm install --save-dev tailwind-float-label
 ```
 
-2.  Add plugin to `plugins` section of `tailwind.config.js`
+Add plugin to `plugins` section of `tailwind.config.js`
 
 ```js
 plugins: [require('tailwind-float-label')(options)],
@@ -76,3 +74,7 @@ Plugins adds three components supposed used together:
 2. If label used before form control, label becomes sticky (always visible)
 3. If label used after form control, label is visible when control contains value
    (classic float label pattern)
+
+## Similar Projects
+
+-   https://github.com/notiz-dev/floating-form-field-tailwindcss
