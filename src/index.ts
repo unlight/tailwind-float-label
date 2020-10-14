@@ -40,20 +40,20 @@ export default function floatLabelFactory(options?: Options) {
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'column-reverse',
-                '& > .is-float-label': {
-                    ...label,
-                    // position: absolute; top/left will be faster
-                    // if used on elements without transitions
-                    position: 'absolute',
+            },
+            '.is-float-label': {
+                ...label,
+                // position: absolute; top/left will be faster
+                // if used on elements without transitions
+                position: 'absolute',
+            },
+            '.control-with-float-label': {
+                ...control,
+                '& + .is-float-label': {
+                    opacity: 0,
                 },
-                '& > .control-with-float-label': {
-                    ...control,
-                    '& + .is-float-label': {
-                        opacity: 0,
-                    },
-                    '&:not(:placeholder-shown) + .is-float-label': {
-                        opacity: 1,
-                    },
+                '&:not(:placeholder-shown) + .is-float-label': {
+                    opacity: 1,
                 },
             },
         });

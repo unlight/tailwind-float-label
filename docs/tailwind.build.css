@@ -592,7 +592,7 @@ video {
   flex-direction: column-reverse;
 }
 
-.has-float-label > .is-float-label {
+.is-float-label {
   line-height: 1;
   font-size: 0.75rem;
   padding-left: 0.25rem;
@@ -602,24 +602,24 @@ video {
   position: absolute;
 }
 
-.has-float-label > .control-with-float-label {
+.control-with-float-label {
   padding-top: 0.5rem;
   padding-bottom: 0.25rem;
 }
 
-.has-float-label > .control-with-float-label + .is-float-label {
+.control-with-float-label + .is-float-label {
   opacity: 0;
 }
 
-.has-float-label > .control-with-float-label:not(:-moz-placeholder-shown) + .is-float-label {
+.control-with-float-label:not(:-moz-placeholder-shown) + .is-float-label {
   opacity: 1;
 }
 
-.has-float-label > .control-with-float-label:not(:-ms-input-placeholder) + .is-float-label {
+.control-with-float-label:not(:-ms-input-placeholder) + .is-float-label {
   opacity: 1;
 }
 
-.has-float-label > .control-with-float-label:not(:placeholder-shown) + .is-float-label {
+.control-with-float-label:not(:placeholder-shown) + .is-float-label {
   opacity: 1;
 }
 
