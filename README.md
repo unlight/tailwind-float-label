@@ -78,3 +78,8 @@ Plugins adds three components supposed used together:
 ## Similar Projects
 
 -   https://github.com/notiz-dev/floating-form-field-tailwindcss
+
+## Resources
+
+-   https://tailwindow.github.io/component-tailwindcss/components/form/input-text/index.html
+-   https://github.com/you-dont-need/You-Dont-Need-JavaScript#Floating
