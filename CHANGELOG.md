@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/unlight/tailwind-float-label/compare/v1.0.1...v1.0.2) (2021-05-01)
+
+
+### Bug Fixes
+
+* Positioning minor fix ([9ce095a](https://github.com/unlight/tailwind-float-label/commit/9ce095a1c9ba0148ec5ba60038a9610fed44331d))
+
 ## [1.0.1](https://github.com/unlight/tailwind-float-label/compare/v1.0.0...v1.0.1) (2020-10-14)
 
 
