@@ -597,7 +597,7 @@ video {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
   font-size: calc(42 / 60 * 1rem);
-  top: calc(-20 / 60 * 1rem);
+  top: calc(-22 / 60 * 1rem);
   left: 0.25rem;
   position: absolute;
 }

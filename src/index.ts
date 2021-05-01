@@ -25,7 +25,7 @@ export default function floatLabelFactory(options?: Options) {
             label: {
                 ['@apply leading-none px-1']: '',
                 fontSize: 'calc(42 / 60 * 1rem)',
-                top: 'calc(-20 / 60 * 1rem)',
+                top: 'calc(-22 / 60 * 1rem)',
                 left: '0.25rem',
             },
         },
