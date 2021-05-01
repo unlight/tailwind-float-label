@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/unlight/tailwind-float-label/compare/v1.0.3...v2.0.0) (2021-05-01)
+
+
+### Features
+
+* New helper class `.is-float-label-sticky` ([2a83d5a](https://github.com/unlight/tailwind-float-label/commit/2a83d5ac66b127f5c13b1054416005214c73d802))
+
+
+### BREAKING CHANGES
+
+* Inversed markup for sticky label are not working anymore use `.is-float-label-sticky` instead
+
 ## [1.0.3](https://github.com/unlight/tailwind-float-label/compare/v1.0.2...v1.0.3) (2021-05-01)
 
 
