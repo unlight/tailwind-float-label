@@ -12,7 +12,7 @@ build() {
     rm -rfv dist
     mkdir dist
     cp -rfv src/*.ts dist
-    cat tsconfig.json | jq 'del(.include, .compilerOptions.outDir)' > dist/tsconfig.json
+    cat tsconfig.json | jq 'del(.include, .compilerOptions.outDir)' >dist/tsconfig.json
     cp -fv README.md LICENSE package.json dist
     cd dist
     /usr/bin/find . -name '*.spec.ts' | xargs rm -rvf
@@ -20,14 +20,6 @@ build() {
     rm -rvf tsconfig.json
     cd ..
     set +x
-}
-
-commit_msg() {
-    if git-branch-is -q -r "^(master)"; then
-        commitlint -E HUSKY_GIT_PARAMS
-    else
-        true
-    fi
 }
 
 commit_lint() {
