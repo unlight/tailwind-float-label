@@ -594,10 +594,10 @@ video {
 
 .is-float-label {
   line-height: 1;
+  font-size: 0.75rem;
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-  font-size: calc(42 / 60 * 1rem);
-  top: calc(-22 / 60 * 1rem);
+  top: 0;
   left: 0.25rem;
   position: absolute;
 }
@@ -613,14 +613,29 @@ video {
 
 .control-with-float-label:not(:-moz-placeholder-shown) + .is-float-label {
   opacity: 1;
+  transform: translate(0, -50%);
 }
 
 .control-with-float-label:not(:-ms-input-placeholder) + .is-float-label {
   opacity: 1;
+  transform: translate(0, -50%);
 }
 
 .control-with-float-label:not(:placeholder-shown) + .is-float-label {
   opacity: 1;
+  transform: translate(0, -50%);
+}
+
+.is-float-label-sticky {
+  line-height: 1;
+  font-size: 0.75rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  top: 0;
+  left: 0.25rem;
+  position: absolute;
+  opacity: 1;
+  transform: translate(0, -50%);
 }
 
 .space-y-0 > :not(template) ~ :not(template) {
