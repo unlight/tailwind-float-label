@@ -21,10 +21,11 @@ export default function floatLabelFactory(options?: Options) {
     const config: Options = Object.assign(
         {},
         {
-            control: 'py-1', // after pt-2
+            control: 'pt-1 pb-1',
             label: {
-                ...toObject('leading-none text-xs px-1'),
-                top: 'calc(-0.125rem * 3)',
+                ['@apply leading-none px-1']: '',
+                fontSize: 'calc(42 / 60 * 1rem)',
+                top: 'calc(-20 / 60 * 1rem)',
                 left: '0.25rem',
             },
         },
@@ -54,8 +55,10 @@ export default function floatLabelFactory(options?: Options) {
                 '& + .is-float-label': {
                     opacity: 0,
                 },
-                '&:not(:placeholder-shown) + .is-float-label': {
-                    opacity: 1,
+                '&:not(:placeholder-shown)': {
+                    '& + .is-float-label': {
+                        opacity: 1,
+                    },
                 },
             },
         });
