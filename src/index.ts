@@ -1,14 +1,5 @@
 import { DeepPartial } from 'simplytyped';
 
-const defaultConfig = {
-    control: 'pt-2 pb-1',
-    label: {
-        ...toObject('leading-none text-xs px-1'),
-        top: 'calc(-0.125rem * 3)',
-        left: '0.25rem',
-    },
-};
-
 export type Options = {
     /**
      * Custom styles for container.
@@ -27,7 +18,18 @@ export type Options = {
 module.exports = floatLabelFactory;
 
 export default function floatLabelFactory(options?: Options) {
-    const config: Options = { ...defaultConfig, ...options };
+    const config: Options = Object.assign(
+        {},
+        {
+            control: 'py-1', // after pt-2
+            label: {
+                ...toObject('leading-none text-xs px-1'),
+                top: 'calc(-0.125rem * 3)',
+                left: '0.25rem',
+            },
+        },
+        options,
+    );
 
     return ({ addComponents }) => {
         const container = config.container ? toObject(config.container) : {};
