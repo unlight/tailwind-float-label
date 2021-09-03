@@ -1,3 +1,10 @@
+## [2.1.0](https://github.com/unlight/tailwind-float-label/compare/v2.0.0...v2.1.0) (2021-09-03)
+
+
+### Features
+
+* Added `.auto-float-label` ([6b0215e](https://github.com/unlight/tailwind-float-label/commit/6b0215e77a7311fd7be84d48d2ab270f5cd676fc))
+
 # [2.0.0](https://github.com/unlight/tailwind-float-label/compare/v1.0.3...v2.0.0) (2021-05-01)
 
 
