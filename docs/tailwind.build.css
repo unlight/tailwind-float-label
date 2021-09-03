@@ -629,6 +629,44 @@ video {
   transform: translate(0, -50%);
 }
 
+.auto-float-label {
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.auto-float-label > label {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  line-height: 1;
+  top: 0;
+  left: 0.25rem;
+  position: absolute;
+  opacity: 0;
+}
+
+.auto-float-label > input, .auto-float-label select, .auto-float-label textarea {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.auto-float-label > input:not(:-moz-placeholder-shown) + label, .auto-float-label select:not(:-moz-placeholder-shown) + label, .auto-float-label textarea:not(:-moz-placeholder-shown) + label {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+.auto-float-label > input:not(:-ms-input-placeholder) + label, .auto-float-label select:not(:-ms-input-placeholder) + label, .auto-float-label textarea:not(:-ms-input-placeholder) + label {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
+.auto-float-label > input:not(:placeholder-shown) + label, .auto-float-label select:not(:placeholder-shown) + label, .auto-float-label textarea:not(:placeholder-shown) + label {
+  opacity: 1;
+  transform: translate(0, -50%);
+}
+
 .sr-only {
   position: absolute;
   width: 1px;

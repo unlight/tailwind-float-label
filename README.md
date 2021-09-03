@@ -37,12 +37,13 @@ type Options = {
 
 ## Usage
 
-Plugins adds three components supposed used together:
+Plugins adds these components supposed used together:
 
 -   `.has-float-label` Container which holds input control and label
 -   `.control-with-float-label` Form control
 -   `.is-float-label` Label
 -   `.is-float-label-sticky` Label which is always visible
+-   But `.auto-float-label` Automatically make `label` floating and `input` inside this container
 
 ```html
 <form class="max-w-xs mx-auto p-5 space-y-4">
@@ -57,13 +58,23 @@ Plugins adds three components supposed used together:
         />
         <label for="name" class="is-float-label bg-white text-gray-500">Name</label>
     </div>
+    <!-- Auto: make `label` floating for `input` -->
+    <div class="auto-float-label">
+        <input
+            type="text"
+            id="auto"
+            autocomplete="off"
+            placeholder="Auto"
+            class="outline-none focus:shadow-outline border w-full px-1"
+        />
+        <label for="auto" class="bg-white text-gray-500">Auto</label>
+    </div>
 </form>
 ```
 
 #### Notes:
 
-`.control-with-float-label` and `.is-float-label`
-must be direct children of `.has-float-label`
+`.control-with-float-label` and `.is-float-label` must be direct children of `.has-float-label`
 
 ## Similar Projects
 

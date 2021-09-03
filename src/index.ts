@@ -67,6 +67,20 @@ export default function floatLabelFactory(options?: Options) {
                 ...floatLabel,
                 ...showLabel,
             },
+            '.auto-float-label': {
+                ...container,
+                position: 'relative',
+                display: 'flex',
+                flexDirection: 'column-reverse',
+                '& > label': {
+                    ...floatLabel,
+                    opacity: 0,
+                },
+                '& > input, select, textarea': {
+                    ...control,
+                    '&:not(:placeholder-shown) + label': showLabel,
+                },
+            },
         });
     };
 }
