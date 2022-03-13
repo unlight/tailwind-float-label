@@ -1,3 +1,20 @@
+## [3.0.0](https://github.com/unlight/tailwind-float-label/compare/v2.1.0...v3.0.0) (2022-03-13)
+
+
+### ⚠ BREAKING CHANGES
+
+* All classes prefixed with `float-label`, see [readme](https://github.com/unlight/tailwind-float-label#usage)
+* Tailwind 3
+
+### Miscellaneous Chores
+
+* Updates ([2f9176d](https://github.com/unlight/tailwind-float-label/commit/2f9176d331129f5e87d37fccf5b19565315fc51c))
+
+
+### Code Refactoring
+
+* Rename classes ([d02a259](https://github.com/unlight/tailwind-float-label/commit/d02a259bde6ed4110ddd992dd735ed25b5abb8c9))
+
 ## [2.1.0](https://github.com/unlight/tailwind-float-label/compare/v2.0.0...v2.1.0) (2021-09-03)
 
 
