@@ -49,25 +49,25 @@ export default function floatLabelFactory(options?: Options) {
         };
 
         addComponents({
-            '.has-float-label': {
+            '.float-label-container': {
                 ...container,
                 position: 'relative',
                 display: 'flex',
                 flexDirection: 'column-reverse',
             },
-            '.is-float-label': floatLabel,
-            '.control-with-float-label': {
+            '.float-label-self': floatLabel,
+            '.float-label-control': {
                 ...control,
-                '& + .is-float-label': {
+                '& + .float-label-self': {
                     opacity: 0,
                 },
-                '&:not(:placeholder-shown) + .is-float-label': showLabel,
+                '&:not(:placeholder-shown) + .float-label-self': showLabel,
             },
-            '.is-float-label-sticky': {
+            '.float-label-sticky': {
                 ...floatLabel,
                 ...showLabel,
             },
-            '.auto-float-label': {
+            '.float-label-auto': {
                 ...container,
                 position: 'relative',
                 display: 'flex',

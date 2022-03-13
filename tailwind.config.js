@@ -1,10 +1,7 @@
 const postcss = require('postcss');
 
 module.exports = {
-    future: {
-        removeDeprecatedGapUtilities: true,
-        purgeLayersByDefault: true,
-    },
+    content: ['src/index.html', 'src/index.ts'],
     theme: {
         extend: {},
     },
