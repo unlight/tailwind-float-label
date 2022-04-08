@@ -84,5 +84,5 @@ Plugins adds these components supposed used together:
 
 -   https://tailwindow.github.io/component-tailwindcss/components/form/input-text/index.html
 -   https://github.com/you-dont-need/You-Dont-Need-JavaScript#Floating
--   https://csslayout.io/patterns/floating-label/
+-   https://csslayout.io/floating-label/
 -   https://tailwindcomponents.com/component/login-form-with-float-label-input
