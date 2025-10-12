@@ -1,9 +1,5 @@
 @layer components {
   .float-container {
-    /* classic version */
-    /*position: relative;*/
-
-    /* grid version */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1rem 1fr;
@@ -13,18 +9,12 @@
     &:has(.float-input:focus) .float-label,
     /* Label when input has value and no placeholder */
     &:has(.float-input:not(:placeholder-shown)) .float-label {
-      /* classic version */
-      /*@apply px-1 opacity-100 scale-75 w-fit -translate-y-5 translate-x-2;*/
       background-color: var(--float-label-background-color);
-      @apply px-1 opacity-100 text-xs w-fit self-start -translate-y-2 translate-x-2;
+      @apply opacity-100 text-xs w-fit self-start -translate-y-2 translate-x-2;
     }
 
     .float-input {
-      /* classic version */
-      /*transition: all 0.2s ease-out;*/
-
-      /* grid version */
-      @apply col-[1] row-[2] transition-all duration-0;
+      @apply col-[1] row-[2];
     }
 
     &:not(.float-always) .float-input::placeholder {
@@ -33,15 +23,6 @@
 
     /** Placeholder replacement */
     .float-label {
-      /* classic version */
-      /*@apply top-2 left-3;
-      /*position: absolute;
-      pointer-events: none;
-      transition: all 0.2s ease-out;
-      transform-origin: 0 0;
-      opacity: 0.5;*/
-
-      /* grid version */
       @apply col-[1] row-[2] self-center pointer-events-none transition-all duration-0 origin-[0_0] opacity-50;
       @apply px-2;
     }
