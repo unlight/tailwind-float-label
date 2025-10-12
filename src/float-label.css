@@ -10,43 +10,51 @@ html {
 
 @layer components {
   .float-container {
-    position: relative;
+    /* classic version */
+    /*position: relative;*/
 
-    /* Target label when input inside container is focused without value */
-    /*    &:focus-within:placeholder-shown .float-label {
-      transform: translateY(-1.75rem) translateX(-0.5rem) scale(0.85);
-    }*/
+    /* grid version */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1rem 1fr;
 
-    /* Target label when input inside container is focused with value */
+    /* Label when input has no value and focused */
+    &:has(.float-input:focus) .float-label {
+      /*transform: translateY(-1.75rem) translateX(-0.5rem) scale(0.85);*/
+    }
 
-    /* Target label when input has value and not focused */
+    /* Label when input has value and not focused */
     &:has(.float-input:not(:placeholder-shown)) .float-label {
-      @apply opacity-100 -translate-y-4 text-xs -translate-x-1 px-1;
+      @apply px-1 opacity-100 -translate-y-5 translate-x-2 scale-75 w-fit;
       background-color: var(--float-label-background-color);
       color: var(--float-label-color);
     }
 
     .float-input {
-      background-color: transparent;
-      transition: all 0.2s ease-out;
+      /* classic version */
+      /*transition: all 0.2s ease-out;*/
+
+      /* grid version */
+      @apply transition-all duration-200 col-[1] row-[2];
 
       &::placeholder {
         color: transparent;
       }
-
-      &:focus {
-        outline: none;
-      }
     }
 
-    /** placeholder replacement */
+    /** Placeholder replacement */
     .float-label {
-      @apply top-2 left-3;
-      position: absolute;
+      /* classic version */
+      /*@apply top-2 left-3;
+      /*position: absolute;
       pointer-events: none;
       transition: all 0.2s ease-out;
       transform-origin: 0 0;
-      opacity: 0.5;
+      opacity: 0.5;*/
+
+      /* grid version */
+      @apply col-[1] row-[2] self-center pointer-events-none transition-all duration-200 origin-[0_0] opacity-50;
+      @apply px-3;
     }
   }
 }
