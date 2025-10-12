@@ -24,7 +24,7 @@
 
     /** Placeholder replacement */
     .float-label {
-      @apply col-[1] row-[2] self-center pointer-events-none transition-all duration-0 origin-[0_0] opacity-50;
+      @apply col-[1] row-[2] self-center pointer-events-none transition-all duration-200 origin-[0_0] opacity-50;
       @apply px-2;
     }
 
