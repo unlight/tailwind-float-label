@@ -91,6 +91,7 @@ Plugins adds these components supposed used together:
 
 ## TODO
 
+- when focused label should top up
 - update readme (no sticky, just remove input placeholder)
 - block with multiple type of input (select, text area)
 - block with size of inputs (lg, xs, sm)

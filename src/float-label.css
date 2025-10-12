@@ -18,7 +18,9 @@ html {
     grid-template-columns: 1fr;
     grid-template-rows: 1rem 1fr;
 
-    /* Label when input has value */
+    /* Label when input has no value and focused */
+    &:has(.float-input:focus) .float-label,
+    /* Label when input has value and no placeholder */
     &:has(.float-input:not(:placeholder-shown)) .float-label {
       /*@apply px-1 opacity-100 scale-75 w-fit -translate-y-5 translate-x-2;*/
       background-color: var(--float-label-background-color);
