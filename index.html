@@ -13,7 +13,9 @@
 
       <form class="space-y-4">
         <div class="float-container">
-          <label for="name" class="float-label">Full Name (1: empty)</label>
+          <label for="name" class="float-label text-gray-600"
+            >Full Name (1: empty)</label
+          >
           <input
             type="text"
             id="name"
@@ -22,8 +24,20 @@
           />
         </div>
 
+        <div class="float-container float-always">
+          <label for="sticky" class="float-label text-gray-600"
+            >Sticky (sticky)</label
+          >
+          <input
+            type="text"
+            id="sticky"
+            class="float-input w-full px-3 py-2 border border-gray-300"
+            placeholder="Sticky ph"
+          />
+        </div>
+
         <div class="float-container">
-          <label for="email" class="float-label"
+          <label for="email" class="float-label text-gray-600"
             >Email Address (2: is focused)</label
           >
           <input
@@ -36,7 +50,7 @@
         </div>
 
         <div class="float-container">
-          <label for="password" class="float-label"
+          <label for="password" class="float-label text-gray-600"
             >Password (3: has value)</label
           >
           <input
@@ -49,7 +63,9 @@
         </div>
 
         <div class="float-container">
-          <label class="float-label">What type of event is it?</label>
+          <label class="float-label text-gray-600"
+            >What type of event is it?</label
+          >
           <select class="float-input w-full px-3 py-2 border border-gray-300">
             <option>Corporate event</option>
             <option>Wedding</option>
@@ -59,7 +75,7 @@
         </div>
 
         <div class="float-container">
-          <label class="float-label">Additional details</label>
+          <label class="float-label text-gray-600">Additional details</label>
           <textarea
             class="float-input w-full border border-gray-300 p-2"
             rows="3"

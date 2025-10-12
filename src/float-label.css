@@ -5,7 +5,6 @@ html {
 @theme {
   /* background for top up label */
   --float-label-background-color: var(--color-white);
-  --float-label-color: var(--color-gray-600);
 }
 
 @layer components {
@@ -18,13 +17,14 @@ html {
     grid-template-columns: 1fr;
     grid-template-rows: 1rem 1fr;
 
+    &.float-always .float-label,
     /* Label when input has no value and focused */
     &:has(.float-input:focus) .float-label,
     /* Label when input has value and no placeholder */
     &:has(.float-input:not(:placeholder-shown)) .float-label {
+      /* classic version */
       /*@apply px-1 opacity-100 scale-75 w-fit -translate-y-5 translate-x-2;*/
       background-color: var(--float-label-background-color);
-      color: var(--float-label-color);
       @apply px-1 opacity-100 text-xs w-fit self-start -translate-y-2 translate-x-2;
     }
 
@@ -34,10 +34,10 @@ html {
 
       /* grid version */
       @apply col-[1] row-[2] transition-all duration-0;
+    }
 
-      &::placeholder {
-        color: transparent;
-      }
+    &:not(.float-always) .float-input::placeholder {
+      color: transparent;
     }
 
     /** Placeholder replacement */
