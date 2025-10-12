@@ -1,2 +1,11 @@
+html {
+  font-size: 15px;
+}
+
+@theme {
+  /* background for top up label */
+  --float-label-background-color: var(--color-white);
+}
+
 @import 'tailwindcss';
 @import './src/float-label.css';
