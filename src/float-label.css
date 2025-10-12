@@ -1,24 +1,52 @@
-.float-container {
-  position: relative;
-  margin-top: 1.5rem;
+html {
+  font-size: 25px;
 }
 
-.float-label {
-  position: absolute;
-  top: 0.75rem;
-  left: 0.75rem;
-  transition: all 0.2s ease-in-out;
-  pointer-events: none;
-  color: #6b7280;
+@theme {
+  /* background for top up label */
+  --float-label-background-color: var(--color-white);
+  --float-label-color: var(--color-gray-600);
 }
 
-.float-input {
-  padding-top: 1.25rem;
-  padding-bottom: 0.5rem;
-}
+@layer components {
+  .float-container {
+    position: relative;
 
-.float-input:focus + .float-label,
-.float-input:not(:placeholder-shown) + .float-label {
-  top: 0.25rem;
-  font-size: 0.75rem;
+    /* Target label when input inside container is focused without value */
+    /*    &:focus-within:placeholder-shown .float-label {
+      transform: translateY(-1.75rem) translateX(-0.5rem) scale(0.85);
+    }*/
+
+    /* Target label when input inside container is focused with value */
+
+    /* Target label when input has value and not focused */
+    &:has(.float-input:not(:placeholder-shown)) .float-label {
+      @apply opacity-100 -translate-y-4 text-xs -translate-x-1 px-1;
+      background-color: var(--float-label-background-color);
+      color: var(--float-label-color);
+    }
+
+    .float-input {
+      background-color: transparent;
+      transition: all 0.2s ease-out;
+
+      &::placeholder {
+        color: transparent;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    /** placeholder replacement */
+    .float-label {
+      @apply top-2 left-3;
+      position: absolute;
+      pointer-events: none;
+      transition: all 0.2s ease-out;
+      transform-origin: 0 0;
+      opacity: 0.5;
+    }
+  }
 }

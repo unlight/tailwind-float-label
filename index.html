@@ -7,39 +7,55 @@
     <link rel="stylesheet" type="text/css" href="./tailwind.css" />
     <title>Tailwind float label</title>
   </head>
-  <body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+  <body class="bg-gray-100 flex justify-center p-4">
     <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-      <h1 class="text-2xl font-bold mb-6 text-gray-800">Float Label Example</h1>
+      <h1 class="text-xl font-bold mb-6 text-gray-800">Float Labels Example</h1>
 
       <form class="space-y-6">
         <div class="float-container">
+          <label for="name" class="float-label">Full Name (1: empty)</label>
           <input
             type="text"
             id="name"
             class="float-input w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            placeholder=" "
+            placeholder="Full Name placeholder"
           />
-          <label for="name" class="float-label">Full Name</label>
         </div>
 
         <div class="float-container">
+          <label for="email" class="float-label"
+            >Email Address (2: is focused)</label
+          >
           <input
             type="email"
             id="email"
             class="float-input w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            placeholder=" "
+            placeholder="Email Address ph"
+            value="va@ma.ru"
           />
-          <label for="email" class="float-label">Email Address</label>
         </div>
 
         <div class="float-container">
+          <label for="password" class="float-label"
+            >Password (3: has value)</label
+          >
           <input
             type="password"
             id="password"
             class="float-input w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            placeholder=" "
+            placeholder="passwordph"
+            value="123456"
           />
-          <label for="password" class="float-label">Password</label>
+        </div>
+
+        <div class="float-container">
+          <label class="float-label">What type of event is it?</label>
+          <select class="float-input w-full px-3 py-2 border border-gray-300">
+            <option>Corporate event</option>
+            <option>Wedding</option>
+            <option>Birthday</option>
+            <option>Other</option>
+          </select>
         </div>
 
         <button
@@ -52,3 +68,18 @@
     </div>
   </body>
 </html>
+
+<script>
+  window.onload = () => {
+    const focusedElement = document.querySelector('#email');
+
+    // email.addEventListener('blur', function (e) {
+    //   // Re-focus immediately after blur
+    //   setTimeout(() => {
+    //     email.focus();
+    //   }, 2000);
+    // });
+
+    focusedElement.focus();
+  };
+</script>
