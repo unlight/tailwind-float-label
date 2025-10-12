@@ -2,7 +2,8 @@
   .float-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1rem 1fr;
+    grid-template-rows: --spacing(1) 1fr;
+    /* min-content*/
 
     &.float-always .float-label,
     /* Label when input has no value and focused */
