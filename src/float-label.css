@@ -18,16 +18,12 @@ html {
     grid-template-columns: 1fr;
     grid-template-rows: 1rem 1fr;
 
-    /* Label when input has no value and focused */
-    &:has(.float-input:focus) .float-label {
-      /*transform: translateY(-1.75rem) translateX(-0.5rem) scale(0.85);*/
-    }
-
-    /* Label when input has value and not focused */
+    /* Label when input has value */
     &:has(.float-input:not(:placeholder-shown)) .float-label {
-      @apply px-1 opacity-100 -translate-y-5 translate-x-2 scale-75 w-fit;
+      /*@apply px-1 opacity-100 scale-75 w-fit -translate-y-5 translate-x-2;*/
       background-color: var(--float-label-background-color);
       color: var(--float-label-color);
+      @apply px-1 opacity-100 text-xs w-fit self-start -translate-y-2 translate-x-2;
     }
 
     .float-input {
@@ -35,7 +31,7 @@ html {
       /*transition: all 0.2s ease-out;*/
 
       /* grid version */
-      @apply transition-all duration-200 col-[1] row-[2];
+      @apply col-[1] row-[2] transition-all duration-0;
 
       &::placeholder {
         color: transparent;
@@ -53,7 +49,7 @@ html {
       opacity: 0.5;*/
 
       /* grid version */
-      @apply col-[1] row-[2] self-center pointer-events-none transition-all duration-200 origin-[0_0] opacity-50;
+      @apply col-[1] row-[2] self-center pointer-events-none transition-all duration-0 origin-[0_0] opacity-50;
       @apply px-3;
     }
   }
