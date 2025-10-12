@@ -1,5 +1,5 @@
 html {
-  font-size: 25px;
+  font-size: 15px;
 }
 
 @theme {
@@ -50,7 +50,11 @@ html {
 
       /* grid version */
       @apply col-[1] row-[2] self-center pointer-events-none transition-all duration-0 origin-[0_0] opacity-50;
-      @apply px-3;
+      @apply px-2;
+    }
+
+    &:has(textarea.float-input) .float-label {
+      @apply self-start;
     }
   }
 }
