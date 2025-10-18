@@ -4,6 +4,11 @@
   "license": "MIT",
   "description": "Tailwind plugin to add floating label, control with float label components",
   "main": "./float-label.css",
+  "exports": {
+    ".": {
+      "style": "./float-label.css"
+    }
+  },
   "keywords": [
     "floating-label",
     "float-label",
