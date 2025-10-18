@@ -1,3 +1,9 @@
+## [4.0.1](https://github.com/unlight/tailwind-float-label/compare/v4.0.0...v4.0.1) (2025-10-18)
+
+### Bug Fixes
+
+* Export for tailwind export ([599fe5d](https://github.com/unlight/tailwind-float-label/commit/599fe5db36e99405361f92a22dfffb1e055f659b))
+
 ## [4.0.0](https://github.com/unlight/tailwind-float-label/compare/v3.0.0...v4.0.0) (2025-10-18)
 
 ### ⚠ BREAKING CHANGES
