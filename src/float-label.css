@@ -3,15 +3,17 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: --spacing(1) 1fr;
-    /* min-content*/
 
-    &.float-always .float-label,
+    /* Label always float (sticky) */
+    &.float-always,
     /* Label when input has no value and focused */
-    &:has(.float-input:focus) .float-label,
+    &:focus-within,
     /* Label when input has value and no placeholder */
-    &:has(.float-input:not(:placeholder-shown)) .float-label {
-      background-color: var(--float-label-background-color);
-      @apply opacity-100 text-xs w-fit self-start -translate-y-2 translate-x-2;
+    &:has(.float-input:not(:placeholder-shown)) {
+      & .float-label {
+        background-color: var(--float-label-background-color);
+        @apply opacity-100 text-xs w-fit self-start -translate-y-2 translate-x-2;
+      }
     }
 
     .float-input {

@@ -3,7 +3,7 @@
   "version": "0.0.0-dev",
   "license": "MIT",
   "description": "Tailwind plugin to add floating label, control with float label components",
-  "main": "index.js",
+  "main": "./float-label.css",
   "keywords": [
     "floating-label",
     "float-label",
@@ -15,8 +15,6 @@
   ],
   "scripts": {
     "dev": "vite",
-    "dev2": "run-p dev:*",
-    "dev:server": "cd docs && lite-server",
     "test": "npm run eslint && npm run tscheck && npm run test:cov",
     "tscheck": "echo tscheck... && tsc --noEmit",
     "tscheck:w": "npm run tscheck -- --watch",
@@ -55,7 +53,6 @@
     "eslint-plugin-unicorn": "^61.0.2",
     "globals": "^16.4.0",
     "mocha": "^11.7.4",
-    "npm-run-all": "^4.1.5",
     "prettier": "^3.6.2",
     "semantic-release": "^24.2.9",
     "simplytyped": "^3.3.0",

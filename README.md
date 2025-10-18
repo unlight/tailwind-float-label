@@ -89,6 +89,10 @@ Plugins adds these components supposed used together:
 - https://csslayout.io/floating-label/
 - https://tailwindcomponents.com/component/login-form-with-float-label-input
 
+## License
+
+[MIT License](https://opensource.org/licenses/MIT) (c) 2025
+
 ## TODO
 
 - find information about plugins how to do it
@@ -97,4 +101,4 @@ Plugins adds these components supposed used together:
 - block with multiple type of input (select, text area)
 - block with size of inputs (lg, xs, sm)
 - build
-- documenation (old version)
+- rewrite documenation (old version, anatomy)

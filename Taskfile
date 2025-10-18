@@ -6,14 +6,9 @@ build() {
     set -x
     rm -rfv dist
     mkdir dist
-    cp -rfv src/*.ts dist
-    cat tsconfig.json | jq 'del(.include, .compilerOptions.outDir)' >dist/tsconfig.json
-    cp -fv README.md LICENSE package.json dist
-    cd dist
-    /usr/bin/find . -name '*.spec.ts' | xargs rm -rvf
-    tsc -p .
-    rm -rvf tsconfig.json
-    cd ..
+    cp -rfv src/float-label.css dist
+    # cat tsconfig.json | jq 'del(.include, .compilerOptions.outDir)' >dist/tsconfig.json
+    cp -fv README.md package.json dist
     set +x
 }
 
