@@ -1,3 +1,19 @@
+## [4.0.0](https://github.com/unlight/tailwind-float-label/compare/v3.0.0...v4.0.0) (2025-10-18)
+
+### ⚠ BREAKING CHANGES
+
+* Update to tailwind v4
+
+### Features
+
+* Modificator always floating (sticky) ([7f8acc4](https://github.com/unlight/tailwind-float-label/commit/7f8acc44ae355d5559a8ca635559fc2671c8ac7b))
+* Update to tailwind v4 ([815ee54](https://github.com/unlight/tailwind-float-label/commit/815ee544073072c10ae756f35e597807d9d2818a))
+* When focused label top up ([1fe10ac](https://github.com/unlight/tailwind-float-label/commit/1fe10acfe3d7e6f703aae5dfd77b47fc6c1e4b1a))
+
+### Performance Improvements
+
+* Replace has by focus-within ([3095cfe](https://github.com/unlight/tailwind-float-label/commit/3095cfe744877df0b66e8e88a084de26f6a9a6a3))
+
 ## [3.0.0](https://github.com/unlight/tailwind-float-label/compare/v2.1.0...v3.0.0) (2022-03-13)
 
 
