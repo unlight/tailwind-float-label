@@ -1,8 +1,6 @@
 @layer utilities {
   .float-container {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: --spacing(1) 1fr;
 
     /* Label always float (sticky) */
     &.float-always,
@@ -11,13 +9,19 @@
     /* Label when input has value and no placeholder */
     &:has(.float-input:not(:placeholder-shown)) {
       & .float-label {
-        background-color: var(--float-label-background-color);
-        @apply opacity-100 text-xs w-fit self-start -translate-y-2 translate-x-2;
+        /*background-color: var(--float-label-background-color);*/
+        @apply bg-[var(--float-label-background-color)]
+          translate-x-2
+          opacity-100
+          text-xs
+          w-fit
+          self-start
+          -translate-y-1/2;
       }
     }
 
     .float-input {
-      @apply col-[1] row-[2];
+      @apply col-start-1 row-start-1;
     }
 
     &:not(.float-always) .float-input::placeholder {
@@ -26,8 +30,9 @@
 
     /** Placeholder replacement */
     .float-label {
-      @apply col-[1] row-[2] self-center pointer-events-none transition-all duration-200 origin-[0_0] opacity-50;
-      @apply px-2;
+      @apply col-start-1 row-start-1
+        opacity-50
+        /*transition-all duration-200*/;
     }
 
     &:has(textarea.float-input) .float-label {

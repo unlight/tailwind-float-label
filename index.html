@@ -13,7 +13,7 @@
 
       <form class="space-y-4">
         <div class="float-container">
-          <label for="name" class="float-label text-gray-600"
+          <label for="name" class="float-label px-2 text-gray-600"
             >Full Name (1: empty)</label
           >
           <input
@@ -25,7 +25,7 @@
         </div>
 
         <div class="float-container float-always">
-          <label for="sticky" class="float-label text-gray-600"
+          <label for="sticky" class="float-label px-2 text-gray-600"
             >Sticky (sticky)</label
           >
           <input
@@ -37,7 +37,7 @@
         </div>
 
         <div class="float-container">
-          <label for="email" class="float-label text-gray-600"
+          <label for="email" class="float-label px-2 text-gray-600"
             >Email Address (2: is focused)</label
           >
           <input
@@ -50,7 +50,7 @@
         </div>
 
         <div class="float-container">
-          <label class="float-label text-gray-600"
+          <label class="float-label px-2 text-gray-600"
             >What type of event is it?</label
           >
           <select class="float-input w-full px-3 py-2 border border-gray-300">
@@ -63,7 +63,9 @@
         </div>
 
         <div class="float-container">
-          <label class="float-label text-gray-600">Additional details</label>
+          <label class="float-label px-2 text-gray-600"
+            >Additional details</label
+          >
           <textarea
             class="float-input w-full border border-gray-300 p-2"
             rows="3"
@@ -85,13 +87,6 @@
 <script>
   window.onload = () => {
     const focusedElement = document.querySelector('#name');
-
-    // email.addEventListener('blur', function (e) {
-    //   // Re-focus immediately after blur
-    //   setTimeout(() => {
-    //     email.focus();
-    //   }, 2000);
-    // });
 
     focusedElement.focus();
   };
