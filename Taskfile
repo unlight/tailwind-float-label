@@ -12,4 +12,8 @@ build() {
     set +x
 }
 
+build_docs() {
+    vite build
+}
+
 "$@"

@@ -17,7 +17,7 @@ Demo - https://unlight.github.io/tailwind-float-label
 <form class="max-w-xs mx-auto p-5 space-y-4">
   <h2 class="text-2xl font-bold text-center">Example</h2>
   <div class="float-container">
-    <label for="name" class="float-label-self bg-white text-gray-500"
+    <label for="name" class="float-label px-2 bg-white text-gray-500"
       >Name</label
     >
     <input
@@ -30,6 +30,8 @@ Demo - https://unlight.github.io/tailwind-float-label
   </div>
 </form>
 ```
+
+If you need animation, add to `.float-label` following classes: `transition-all duration-200`
 
 ## Similar Projects
 

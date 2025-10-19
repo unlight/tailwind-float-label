@@ -23,7 +23,8 @@
     "test": "echo no tests",
     "tscheck": "echo tscheck... && tsc --noEmit",
     "tscheck:w": "npm run tscheck -- --watch",
-    "build": "sh Taskfile build"
+    "build": "sh Taskfile build",
+    "build_docs": "sh Taskfile build_docs"
   },
   "repository": {
     "type": "git",
