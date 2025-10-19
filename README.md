@@ -11,7 +11,7 @@ Demo - https://unlight.github.io/tailwind-float-label
 3. Plugin provides classes which must be set for label and input to make label floats.
    - `.float-container` Container which holds input control and label
    - `.float-input` Form input control
-   - `.float-always` Use with `.float-container` to makem label always visible (sticky)
+   - `.float-always` Use with `.float-container` to make label always visible (sticky)
 
 ```html
 <form class="max-w-xs mx-auto p-5 space-y-4">
