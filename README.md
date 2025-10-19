@@ -4,7 +4,7 @@ Tailwind plugin to add floating label, control with float label components
 
 Demo - https://unlight.github.io/tailwind-float-label
 
-## Setup and configration
+## Setup and configuration
 
 1. `npm install --save-dev tailwind-float-label`
 2. Add `@import 'tailwind-float-label'` to your main css file
