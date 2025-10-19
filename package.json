@@ -45,5 +45,8 @@
     "semantic-release": "^24.2.9",
     "tailwindcss": "^4.1.14",
     "vite": "^7.1.10"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-arm64-gnu": "^4.0.0"
   }
 }
