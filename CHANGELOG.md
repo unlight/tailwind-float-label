@@ -1,3 +1,13 @@
+## [5.0.0](https://github.com/unlight/tailwind-float-label/compare/v4.0.1...v5.0.0) (2025-10-19)
+
+### ⚠ BREAKING CHANGES
+
+* Removed animation and other styled classes
+
+### Performance Improvements
+
+* Removed animation and other styled classes ([bbc9451](https://github.com/unlight/tailwind-float-label/commit/bbc9451871505263d71e451109c2eceacdd5cc23))
+
 ## [4.0.1](https://github.com/unlight/tailwind-float-label/compare/v4.0.0...v4.0.1) (2025-10-18)
 
 ### Bug Fixes
