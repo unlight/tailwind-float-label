@@ -32,10 +32,11 @@
     .float-label {
       @apply col-start-1 row-start-1
         opacity-50
+        self-center
         /*transition-all duration-200*/;
     }
 
-    &:has(textarea.float-input) .float-label {
+    textarea.float-input .float-label {
       @apply self-start;
     }
   }
