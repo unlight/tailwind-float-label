@@ -58,9 +58,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: 'Install depependencies'
-        run: npm install --force
+        run: |
+          rm -rfv node_modules package-lock.json
+          npm install --force
       - name: Build docs
-        run: npm run build_docs
+        run: |
+          npm run build_docs
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
