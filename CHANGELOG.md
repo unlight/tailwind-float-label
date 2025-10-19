@@ -1,3 +1,9 @@
+## [5.0.2](https://github.com/unlight/tailwind-float-label/compare/v5.0.1...v5.0.2) (2025-10-19)
+
+### Bug Fixes
+
+* Top label for textarea ([bcd2508](https://github.com/unlight/tailwind-float-label/commit/bcd2508b2c31b57518bb71689cce877a81d2a4f4))
+
 ## [5.0.1](https://github.com/unlight/tailwind-float-label/compare/v5.0.0...v5.0.1) (2025-10-19)
 
 ### Bug Fixes
