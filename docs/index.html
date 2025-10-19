@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind float label</title>
+    <link rel="stylesheet" crossorigin href="/assets/index-Dc0rw2i8.css">
+  </head>
+  <body class="bg-gray-100 flex justify-center p-4">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+      <h1 class="text-xl font-bold mb-4 text-gray-800">Float Labels Example</h1>
+
+      <form class="space-y-4">
+        <div class="float-container">
+          <label for="fullname" class="float-label px-2 text-gray-600"
+            >Full Name (1: empty)</label
+          >
+          <input
+            type="text"
+            id="fullname"
+            class="float-input w-full px-3 py-2 border border-gray-300"
+            placeholder="Full Name placeholder"
+          />
+        </div>
+
+        <div class="float-container float-always">
+          <label for="sticky" class="float-label px-2 text-gray-600"
+            >Sticky (sticky)</label
+          >
+          <input
+            type="text"
+            id="sticky"
+            class="float-input w-full px-3 py-2 border border-gray-300"
+            placeholder="Sticky ph"
+          />
+        </div>
+
+        <div class="float-container">
+          <label for="email" class="float-label px-2 text-gray-600"
+            >Email Address (2: is focused)</label
+          >
+          <input
+            type="email"
+            id="email"
+            class="float-input w-full px-3 py-2 border border-gray-300"
+            placeholder="Email Address ph"
+            value="va@ma.ru"
+          />
+        </div>
+
+        <div class="float-container">
+          <label class="float-label px-2 text-gray-600"
+            >What type of event is it?</label
+          >
+          <select class="float-input w-full px-3 py-2 border border-gray-300">
+            <option></option>
+            <option>Corporate event</option>
+            <option>Wedding</option>
+            <option>Birthday</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="float-container">
+          <label class="float-label px-2 text-gray-600"
+            >Additional details</label
+          >
+          <textarea
+            class="float-input w-full border border-gray-300 p-2"
+            rows="3"
+            placeholder="Additional details"
+          ></textarea>
+        </div>
+
+        <button
+          type="button"
+          class="w-full bg-blue-500 text-white py-2 px-4 hover:cursor-pointer"
+        >
+          Submit
+        </button>
+      </form>
+      <form class="max-w-xs mx-auto p-5 space-y-4">
+        <h2 class="text-2xl font-bold text-center">README Example</h2>
+        <div class="float-container">
+          <label for="name" class="float-label px-1 bg-white text-gray-500"
+            >Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            autocomplete="off"
+            placeholder="Name"
+            class="float-input outline-none focus:shadow-outline border w-full px-1"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+
+<script>
+  window.onload = () => {
+    const focusedElement = document.querySelector('#name');
+
+    focusedElement.focus();
+  };
+</script>
