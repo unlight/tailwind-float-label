@@ -62,6 +62,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
   deploy:
+    name: 'Deploy'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
