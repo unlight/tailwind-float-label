@@ -1,3 +1,9 @@
+## [5.0.1](https://github.com/unlight/tailwind-float-label/compare/v5.0.0...v5.0.1) (2025-10-19)
+
+### Bug Fixes
+
+* Center label for inputs ([0df4b14](https://github.com/unlight/tailwind-float-label/commit/0df4b1491f37060b07e26077dfe3eb6108f01d8e))
+
 ## [5.0.0](https://github.com/unlight/tailwind-float-label/compare/v4.0.1...v5.0.0) (2025-10-19)
 
 ### ⚠ BREAKING CHANGES
