@@ -36,7 +36,7 @@
         /*transition-all duration-200*/;
     }
 
-    textarea.float-input .float-label {
+    &:has(textarea.float-input) .float-label {
       @apply self-start;
     }
   }
