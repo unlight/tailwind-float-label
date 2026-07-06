@@ -1,14 +1,18 @@
 @layer utilities {
-  .float-container {
+  /* naked */
+  .float-container,
+  /* shadcn */ [data-slot='field'] {
     display: grid;
 
     /* Label always float (sticky) */
     &.float-always,
+    &[data-float-always],
     /* Label when input has no value and focused */
     &:focus-within,
     /* Label when input has value and no placeholder */
-    &:has(.float-input:not(:placeholder-shown)) {
-      & .float-label {
+    &:has(:is(.float-input, [data-slot='input']):not(:placeholder-shown)) {
+      & .float-label,
+      [data-slot='field-label'] {
         /*background-color: var(--float-label-background-color);*/
         @apply bg-[var(--float-label-background-color)]
           translate-x-2
@@ -20,23 +24,27 @@
       }
     }
 
-    .float-input {
+    .float-input,
+
+    /* shadcn */ [data-slot='input'] {
       @apply col-start-1 row-start-1;
     }
 
-    &:not(.float-always) .float-input::placeholder {
+    &:not(:is(.float-always, [data-float-always]))
+      :is(.float-input, [data-slot='input'])::placeholder {
       color: transparent;
     }
 
     /** Placeholder replacement */
-    .float-label {
+    .float-label,
+    /* shadcn */ [data-slot='field-label'] {
       @apply col-start-1 row-start-1
         opacity-50
         self-center
-        /*transition-all duration-200*/;
+        /*transition-all duration-100;*/;
     }
 
-    &:has(textarea.float-input) .float-label {
+    &:has(textarea:is(.float-input, [data-slot='input'])) .float-label {
       @apply self-start;
     }
   }

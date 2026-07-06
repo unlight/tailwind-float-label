@@ -8,10 +8,11 @@
     <title>Tailwind float label</title>
   </head>
   <body class="bg-gray-100 flex justify-center p-4">
-    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-      <h1 class="text-xl font-bold mb-4 text-gray-800">Float Labels Example</h1>
-
-      <form class="space-y-4">
+    <div class="bg-white p-8 rounded-lg max-w-3xl flex flex-row gap-x-4">
+      <form class="space-y-4 flex-1/2">
+        <h1 class="text-xl font-bold mb-4 text-gray-800">
+          Float Labels Example
+        </h1>
         <div class="float-container">
           <label for="fullname" class="float-label px-2 text-gray-600"
             >Full Name</label
@@ -84,13 +85,89 @@
             placeholder="Full Name placeholder"
           />
         </div>
+      </form>
 
-        <button
-          type="button"
-          class="w-full bg-blue-500 text-white py-2 px-4 hover:cursor-pointer"
+      <!-- Shadcn -->
+      <form class="space-y-4 flex-1/2">
+        <h1 class="text-xl font-bold mb-4 text-gray-800">shadcn</h1>
+
+        <div data-slot="field">
+          <label data-slot="field-label" for="Phone" class="px-2 text-gray-600"
+            >Phone</label
+          >
+          <input
+            data-slot="input"
+            type="text"
+            id="Phone"
+            class="w-full px-3 py-2 border border-gray-300"
+            placeholder="Phone placeholder"
+          />
+        </div>
+
+        <div data-slot="field" data-float-always>
+          <label data-slot="field-label" for="url" class="px-2 text-gray-600"
+            >Url (data-float-always)</label
+          >
+          <input
+            data-slot="input"
+            type="text"
+            id="url"
+            class="w-full px-3 py-2 border border-gray-300"
+            placeholder="e.g. https://example.com (placeholder)"
+          />
+        </div>
+
+        <!-- Native select -->
+        <div
+          class="group/native-select relative w-fit has-[select:disabled]:opacity-50"
+          data-slot="native-select-wrapper"
+          data-size="default"
         >
-          Submit
-        </button>
+          <label data-slot="field-label" for="" class="px-2 text-gray-600"
+            >Status (WIP)</label
+          >
+          <select
+            data-slot="native-select"
+            data-size="default"
+            class="w-full rounded-lg border border-input bg-transparent py-1 pr-8 pl-2 transition-colors outline-none select-none selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-1 disabled:pointer-events-none disabled:cursor-not-allowed aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-[size=sm]:rounded-[min(var(--radius-md),10px)] data-[size=sm]:py-0.5 dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40"
+          >
+            <option
+              data-slot="native-select-option"
+              class="bg-[Canvas] text-[CanvasText]"
+              value=""
+            >
+              Select status
+            </option>
+            <option
+              data-slot="native-select-option"
+              class="bg-[Canvas] text-[CanvasText]"
+              value="todo"
+            >
+              Todo
+            </option>
+            <option
+              data-slot="native-select-option"
+              class="bg-[Canvas] text-[CanvasText]"
+              value="in-progress"
+            >
+              In Progress
+            </option>
+            <option
+              data-slot="native-select-option"
+              class="bg-[Canvas] text-[CanvasText]"
+              value="done"
+            >
+              Done
+            </option>
+            <option
+              data-slot="native-select-option"
+              class="bg-[Canvas] text-[CanvasText]"
+              value="cancelled"
+            >
+              Cancelled
+            </option>
+          </select>
+        </div>
       </form>
     </div>
   </body>
