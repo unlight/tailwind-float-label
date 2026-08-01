@@ -40,8 +40,8 @@
     /* shadcn */ [data-slot='field-label'] {
       @apply col-start-1 row-start-1
         opacity-50
-        self-center
-        /*transition-all duration-100;*/;
+        self-center;
+      /*transition-all duration-100;*/
     }
 
     &:has(textarea:is(.float-input, [data-slot='input'])) .float-label {

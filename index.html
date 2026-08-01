@@ -118,56 +118,6 @@
         </div>
 
         <!-- Native select -->
-        <div
-          class="group/native-select relative w-fit has-[select:disabled]:opacity-50"
-          data-slot="native-select-wrapper"
-          data-size="default"
-        >
-          <label data-slot="field-label" for="" class="px-2 text-gray-600"
-            >Status (WIP)</label
-          >
-          <select
-            data-slot="native-select"
-            data-size="default"
-            class="w-full rounded-lg border border-input bg-transparent py-1 pr-8 pl-2 transition-colors outline-none select-none selection:bg-primary selection:text-primary-foreground placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-1 disabled:pointer-events-none disabled:cursor-not-allowed aria-invalid:border-destructive aria-invalid:ring-3 aria-invalid:ring-destructive/20 data-[size=sm]:rounded-[min(var(--radius-md),10px)] data-[size=sm]:py-0.5 dark:bg-input/30 dark:hover:bg-input/50 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40"
-          >
-            <option
-              data-slot="native-select-option"
-              class="bg-[Canvas] text-[CanvasText]"
-              value=""
-            >
-              Select status
-            </option>
-            <option
-              data-slot="native-select-option"
-              class="bg-[Canvas] text-[CanvasText]"
-              value="todo"
-            >
-              Todo
-            </option>
-            <option
-              data-slot="native-select-option"
-              class="bg-[Canvas] text-[CanvasText]"
-              value="in-progress"
-            >
-              In Progress
-            </option>
-            <option
-              data-slot="native-select-option"
-              class="bg-[Canvas] text-[CanvasText]"
-              value="done"
-            >
-              Done
-            </option>
-            <option
-              data-slot="native-select-option"
-              class="bg-[Canvas] text-[CanvasText]"
-              value="cancelled"
-            >
-              Cancelled
-            </option>
-          </select>
-        </div>
       </form>
     </div>
   </body>
