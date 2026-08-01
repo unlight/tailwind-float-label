@@ -48,6 +48,11 @@
 
     /* Label always float (sticky) */
     &[data-float-always],
+    /* Components without placeholder: label always float
+    &:has([data-slot='select-trigger']),
+    &:has([data-slot='popover-trigger']),
+    &:has([data-slot='input-otp']),
+    */
     /* Label when input has no value and focused */
     &:focus-within,
     /* Label when input has value and no placeholder */
