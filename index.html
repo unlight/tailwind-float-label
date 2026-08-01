@@ -20,7 +20,7 @@
           <input
             type="text"
             id="fullname"
-            class="float-input w-full px-3 py-2 border border-gray-300"
+            class="float-input w-full px-3 py-2 border"
             placeholder="Full Name placeholder"
           />
         </div>
@@ -32,7 +32,7 @@
           <input
             type="text"
             id="sticky"
-            class="float-input w-full px-3 py-2 border border-gray-300"
+            class="float-input w-full px-3 py-2 border"
             placeholder="Sticky ph"
           />
         </div>
@@ -44,7 +44,7 @@
           <input
             type="email"
             id="email"
-            class="float-input w-full px-3 py-2 border border-gray-300"
+            class="float-input w-full px-3 py-2 border"
             placeholder="Email Address ph"
             value="va@ma.ru"
           />
@@ -54,7 +54,7 @@
           <label class="float-label px-2 text-gray-600"
             >What type of event is it?</label
           >
-          <select class="float-input w-full px-3 py-2 border border-gray-300">
+          <select class="float-input w-full px-3 py-2 border">
             <option></option>
             <option>Corporate event</option>
             <option>Wedding</option>
@@ -68,7 +68,7 @@
             >Additional details</label
           >
           <textarea
-            class="float-input w-full border border-gray-300 p-2"
+            class="float-input w-full border p-2"
             rows="3"
             placeholder="Additional details"
           ></textarea>
@@ -81,16 +81,17 @@
           <input
             type="text"
             id="bigname"
-            class="float-input w-full px-3 py-2 border border-gray-300"
+            class="float-input w-full px-3 py-2 border"
             placeholder="Full Name placeholder"
           />
         </div>
       </form>
 
-      <!-- Shadcn -->
+      <!-- Shadcn (no float classes) -->
       <form class="space-y-4 flex-1/2">
         <h1 class="text-xl font-bold mb-4 text-gray-800">shadcn</h1>
 
+        <!-- Phone -->
         <div data-slot="field">
           <label data-slot="field-label" for="Phone" class="px-2 text-gray-600"
             >Phone</label
@@ -99,11 +100,12 @@
             data-slot="input"
             type="text"
             id="Phone"
-            class="w-full px-3 py-2 border border-gray-300"
+            class="w-full px-3 py-2 border"
             placeholder="Phone placeholder"
           />
         </div>
 
+        <!-- Url (data-float-always) -->
         <div data-slot="field" data-float-always>
           <label data-slot="field-label" for="url" class="px-2 text-gray-600"
             >Url (data-float-always)</label
@@ -112,12 +114,54 @@
             data-slot="input"
             type="text"
             id="url"
-            class="w-full px-3 py-2 border border-gray-300"
+            class="w-full px-3 py-2 border"
             placeholder="e.g. https://example.com (placeholder)"
           />
         </div>
 
         <!-- Native select -->
+        <div data-slot="field" data-float-always>
+          <label data-slot="field-label" for="select" class="px-2 text-gray-600"
+            >Food</label
+          >
+
+          <select
+            id="select"
+            data-slot="native-select"
+            data-size="default"
+            class="appearance-none border py-2 px-3"
+          >
+            <optgroup
+              data-slot="native-select-optgroup"
+              class=""
+              label="Fruits"
+            >
+              <option
+                data-slot="native-select-option"
+                value=""
+                selected=""
+              ></option>
+              <option data-slot="native-select-option" value="apple">
+                Apple
+              </option>
+              <option data-slot="native-select-option" value="banana">
+                Banana
+              </option>
+              <option data-slot="native-select-option" value="blueberry">
+                Blueberry
+              </option>
+            </optgroup>
+            <optgroup
+              data-slot="native-select-optgroup"
+              class=""
+              label="Vegetables"
+            >
+              <option data-slot="native-select-option" value="carrot">
+                Carrot
+              </option>
+            </optgroup>
+          </select>
+        </div>
       </form>
     </div>
   </body>

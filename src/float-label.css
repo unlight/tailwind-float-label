@@ -1,18 +1,15 @@
 @layer utilities {
-  /* naked */
-  .float-container,
-  /* shadcn */ [data-slot='field'] {
+  /** Naked classes */
+  .float-container {
     display: grid;
 
     /* Label always float (sticky) */
     &.float-always,
-    &[data-float-always],
     /* Label when input has no value and focused */
     &:focus-within,
     /* Label when input has value and no placeholder */
-    &:has(:is(.float-input, [data-slot='input']):not(:placeholder-shown)) {
-      & .float-label,
-      [data-slot='field-label'] {
+    &:has(.float-input:not(:placeholder-shown)) {
+      & .float-label {
         /*background-color: var(--float-label-background-color);*/
         @apply bg-[var(--float-label-background-color)]
           translate-x-2
@@ -24,27 +21,68 @@
       }
     }
 
-    .float-input,
-
-    /* shadcn */ [data-slot='input'] {
+    .float-input {
       @apply col-start-1 row-start-1;
     }
 
-    &:not(:is(.float-always, [data-float-always]))
-      :is(.float-input, [data-slot='input'])::placeholder {
+    &:not(.float-always) .float-input::placeholder {
       color: transparent;
     }
 
     /** Placeholder replacement */
-    .float-label,
-    /* shadcn */ [data-slot='field-label'] {
+    .float-label {
       @apply col-start-1 row-start-1
         opacity-50
         self-center;
       /*transition-all duration-100;*/
     }
 
-    &:has(textarea:is(.float-input, [data-slot='input'])) .float-label {
+    &:has(textarea.float-input) .float-label {
+      @apply self-start;
+    }
+  }
+
+  /** shadcn/ui */
+  [data-slot='field'] {
+    display: grid;
+
+    /* Label always float (sticky) */
+    &[data-float-always],
+    /* Label when input has no value and focused */
+    &:focus-within,
+    /* Label when input has value and no placeholder */
+    &:has(:is([data-slot='input'], [data-slot='textarea'], [data-slot='native-select']):not(:placeholder-shown)) {
+      & [data-slot='field-label'] {
+        /*background-color: var(--float-label-background-color);*/
+        @apply bg-[var(--float-label-background-color)]
+          translate-x-2
+          opacity-100
+          text-xs
+          w-fit
+          self-start
+          -translate-y-1/2;
+      }
+    }
+
+    [data-slot='input'],
+    [data-slot='textarea'],
+    [data-slot='native-select'] {
+      @apply col-start-1 row-start-1;
+    }
+
+    &:not([data-float-always]) [data-slot='input']::placeholder {
+      color: transparent;
+    }
+
+    /** Placeholder replacement */
+    [data-slot='field-label'] {
+      @apply col-start-1 row-start-1
+        opacity-50
+        self-center;
+      /*transition-all duration-100;*/
+    }
+
+    &:has(textarea[data-slot='input']) [data-slot='field-label'] {
       @apply self-start;
     }
   }
