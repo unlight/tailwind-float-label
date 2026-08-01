@@ -70,7 +70,8 @@
       @apply col-start-1 row-start-1;
     }
 
-    &:not([data-float-always]) [data-slot='input']::placeholder {
+    &:not([data-float-always])
+      :is([data-slot='input'], [data-slot='textarea'])::placeholder {
       color: transparent;
     }
 
@@ -82,7 +83,7 @@
       /*transition-all duration-100;*/
     }
 
-    &:has(textarea[data-slot='input']) [data-slot='field-label'] {
+    &:has([data-slot='textarea']) [data-slot='field-label'] {
       @apply self-start;
     }
   }
