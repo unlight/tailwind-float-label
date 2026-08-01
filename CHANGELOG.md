@@ -1,3 +1,5 @@
+## [5.0.3](https://github.com/unlight/tailwind-float-label/compare/v5.0.2...v5.0.3) (2026-08-01)
+
 ## [5.0.2](https://github.com/unlight/tailwind-float-label/compare/v5.0.1...v5.0.2) (2025-10-19)
 
 ### Bug Fixes
